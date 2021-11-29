@@ -1,4 +1,4 @@
-$modelname "props_arcade/cabinet/cabinet.model"
+$modelname "props_arcade/cabinet/cabinet_v2.mdl"
 
 $bodygroup "cabinet"
 {
@@ -25,11 +25,6 @@ $sequence button2 "anims/button2.smd"
 $sequence button3 "anims/button3.smd"
 $sequence button4 "anims/button4.smd"
 
-$sequence joystick1_b "anims/joystick1_b.smd"
-$sequence joystick1_f "anims/joystick1_f.smd"
-$sequence joystick1_l "anims/joystick1_l.smd"
-$sequence joystick1_r "anims/joystick1_r.smd"
-
 $sequence joystick2_b "anims/joystick2_b.smd"
 $sequence joystick2_f "anims/joystick2_f.smd"
 $sequence joystick2_l "anims/joystick2_l.smd"
@@ -51,6 +46,25 @@ $sequence w_steer_l "anims/w_steer_l.smd"
 $sequence w_steer_r "anims/w_steer_r.smd"
 $sequence w_steer_l_full "anims/w_steer_l_full.smd"
 $sequence w_steer_r_full "anims/w_steer_r_full.smd"
+
+$animation joystick1_b "anims/joystick1_b.smd"
+$animation joystick1_f "anims/joystick1_f.smd"
+$animation joystick1_l "anims/joystick1_l.smd"
+$animation joystick1_r "anims/joystick1_r.smd"
+
+//$attachment "joy1" "joystick1" 0 0 0
+
+$sequence joystick {
+	joystick1_l
+	joystick1_f
+	joystick1_r
+	joystick1_b
+
+	blendwidth 4
+ 	blend move_x -1 1
+ 	blend move_y -1 1
+	//delta
+}
 
 $collisionmodel "cabinet_phys"  {
 	$concave
